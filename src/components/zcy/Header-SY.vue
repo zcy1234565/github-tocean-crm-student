@@ -1,5 +1,12 @@
 <template>
+
+
+
     <div class="header">
+
+
+
+
         <div class="logo">拓胜学生端系统</div>
         <div class="user-info">
             <el-dropdown trigger="click" @command="handleCommand">
@@ -39,7 +46,6 @@
 </script>
 <style scoped>
     .header {
-        background: url('../../../static/img/img.jpg')no-repeat;
         position: relative;
         box-sizing: border-box;
         width: 100%;

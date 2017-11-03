@@ -1,18 +1,33 @@
 <template>
-    <div class="header">
-        <div class="logo">拓胜学生端系统</div>
-        <div class="user-info">
-            <el-dropdown trigger="click" @command="handleCommand">
-                <span class="el-dropdown-link">
-                    <img class="user-logo" src="../../../static/img/img.jpg">
-                    {{username}}
-                </span>
-                <el-dropdown-menu slot="dropdown">
-                    <el-dropdown-item command="loginout">退出</el-dropdown-item>
-                </el-dropdown-menu>
-            </el-dropdown>
+
+
+        <div class="header">
+            <div class="logo">拓胜学生端系统</div>
+            <img class="header-1" src="../../../screenshots/title.png"/>
+                 <div>欢迎来到拓胜学生端系统
+nom</div>
+                <el-button type="success" size="mini" class="but">成功按钮</el-button>
+
+
+            <div class="user-info">
+                <el-dropdown trigger="click" @command="handleCommand">
+                    <span class="el-dropdown-link">
+                        <!--
+                        <img class="user-logo" src="../../../static/img/img.jpg">
+
+                        {{username}}
+                        -->
+                    </span>
+                    <el-dropdown-menu slot="dropdown">
+                        <!--
+                        <el-dropdown-item command="loginout">退出</el-dropdown-item>
+                        -->
+                    </el-dropdown-menu>
+                </el-dropdown>
+            </div>
         </div>
-    </div>
+
+
 </template>
 <script>
     export default {
@@ -38,8 +53,11 @@
     }
 </script>
 <style scoped>
+
     .header {
-        background: url('../../../static/img/img.jpg')no-repeat;
+        position: relative;
+        background: url('../../../screenshots/timg2.jpg')no-repeat;
+        background-size: 100%;
         position: relative;
         box-sizing: border-box;
         width: 100%;
@@ -47,6 +65,17 @@
         font-size: 22px;
         line-height: 70px;
         color: #fff;
+    }
+    .but{
+        position: absolute;
+
+        right: 20px;
+        top: 25px;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+    .header-1{
+        height: 70px;
     }
     .header .logo{
         float: left;
@@ -57,7 +86,7 @@
         float: right;
         padding-right: 50px;
         font-size: 16px;
-        color: #fff;
+        color: #000000;
     }
     .user-info .el-dropdown-link{
         position: relative;

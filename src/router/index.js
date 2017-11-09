@@ -7,11 +7,15 @@ export default new Router({
     routes: [
         {
             path: '/',
-            redirect: '/login'
+            redirect: '/loginHeader'
         },
         {
-            path: '/readme',
-            component: resolve => require(['../components/common/Home.vue'], resolve),
+            path:'/loginHeader',
+            component: resolve => require(['../components/zcy/loginHeader.vue'], resolve),
+        },
+        {
+                path:'/readme',
+                 component: resolve => require(['../components/common/Home.vue'], resolve),
             children:[
                 {
                     path: '/',

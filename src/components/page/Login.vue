@@ -34,15 +34,22 @@
                         { required: true, message: '请输入密码', trigger: 'blur' }
                     ]
                 },
+<<<<<<< HEAD
                 errorMsg:'',
                 url:'/student/login'
+=======
+                errorMsg:'',//登录失败显示的信息
+                url:'/student/login'//后端的登录接口
+>>>>>>> origin/dev
             }
+
         },
         methods: {
             submitForm(formName) {
                 const self = this;
                 self.$refs[formName].validate((valid) => {
                     if (valid) {
+<<<<<<< HEAD
                         var param= {//传给后端的数据
                             username: self.ruleForm.username,
                             password: self.ruleForm.password
@@ -58,6 +65,24 @@
                             }
                         })
                     }else{
+=======
+                        var param = {
+                            username:self.ruleForm.username,
+                            password:self.ruleForm.password
+                        };
+                        self.$axios.post(self.url, param).then((res) => {
+                            console.log(res.data.success);
+                            if(res.data.success){//登录成功
+                                localStorage.setItem('USERNAME',self.ruleForm.username);
+                                localStorage.setItem('JWT_TOKEN',res.data.result);
+                                self.$router.push('/readme');
+                            }else{
+                                self.errorMsg = res.data.error;
+                            }
+                        })
+
+                    } else {
+>>>>>>> origin/dev
                         console.log('error submit!!');
                         return false;
                     }

@@ -1,11 +1,12 @@
 <template>
     <div class="sidebar">
-        <el-menu :default-active="onRoutes" class="el-menu-vertical-demo" theme="dark" unique-opened router>
-            <template v-for="item in items">
+        <el-menu :default-active="onRoutes" class="el-menu-vertical-demo" theme="dark" unique-opened router ba >
+            <template
+                      v-for="item in items">
                 <template v-if="item.subs">
                     <el-submenu :index="item.index">
-                        <template slot="title"><i :class="item.icon"></i>{{ item.title }}</template>
-                        <el-menu-item v-for="(subItem,i) in item.subs" :key="i" :index="subItem.index">{{ subItem.title }}
+                        <template slot="title" ><i :class="item.icon"></i>{{ item.title }}</template>
+                        <el-menu-item  v-for="(subItem,i) in item.subs" :key="i" :index="subItem.index">{{ subItem.title }}
                         </el-menu-item>
                     </el-submenu>
                 </template>
@@ -23,6 +24,7 @@
     export default {
         data() {
             return {
+
                 items: [
                     {
                         icon: 'el-icon-setting',
@@ -139,18 +141,22 @@
         }
     }
 </script>
-
+<!--bottom:0;-->
 <style scoped>
     .sidebar{
+        color: #ffffff;
         display: block;
         position: absolute;
-        width: 250px;
-        left: 0;
-        top: 70px;
-        bottom:0;
-        background: #2E363F;
+        width: 220px;
+        left: 5px;
+        top: 75px;
+        margin-right: 30px;
+
+
     }
     .sidebar > ul {
-        height:100%;
+        background-color: #ffffff;
     }
+
 </style>
+

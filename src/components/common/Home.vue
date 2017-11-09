@@ -17,3 +17,9 @@
         }
     }
 </script>
+<style scoped>
+    .wrapper{
+        background-color: #65C7FF;
+    }
+
+</style>

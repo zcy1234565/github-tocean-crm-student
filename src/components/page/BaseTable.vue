@@ -1,43 +1,71 @@
 <template>
-    <div class="table">
+    <div>
         <div class="crumbs">
-            <el-breadcrumb separator="/">
-                <el-breadcrumb-item><i class="el-icon-menu"></i> 表格</el-breadcrumb-item>
-                <el-breadcrumb-item>基础表格</el-breadcrumb-item>
+            <el-breadcrumb class="crumbs-vue">
+                <el-breadcrumb-item> 当前功能</el-breadcrumb-item>
+                <el-breadcrumb-item>就业申请信息</el-breadcrumb-item>
             </el-breadcrumb>
         </div>
-        <div class="handle-box">
-            <el-button type="primary" icon="delete" class="handle-del mr10" @click="delAll">批量删除</el-button>
-            <el-select v-model="select_cate" placeholder="筛选省份" class="handle-select mr10">
-                <el-option key="1" label="广东省" value="广东省"></el-option>
-                <el-option key="2" label="湖南省" value="湖南省"></el-option>
-            </el-select>
-            <el-input v-model="select_word" placeholder="筛选关键词" class="handle-input mr10"></el-input>
-            <el-button type="primary" icon="search" @click="search">搜索</el-button>
+        <div class="plugins">
+            <div class="div1">你已经填写了就业申请信息！</div>
         </div>
-        <el-table :data="data" border style="width: 100%" ref="multipleTable" @selection-change="handleSelectionChange">
-            <el-table-column type="selection" width="55"></el-table-column>
-            <el-table-column prop="date" label="日期" sortable width="150">
-            </el-table-column>
-            <el-table-column prop="name" label="姓名" width="120">
-            </el-table-column>
-            <el-table-column prop="address" label="地址" :formatter="formatter">
-            </el-table-column>
-            <el-table-column label="操作" width="180">
-                <template scope="scope">
-                    <el-button size="small"
-                            @click="handleEdit(scope.$index, scope.row)">编辑</el-button>
-                    <el-button size="small" type="danger"
-                            @click="handleDelete(scope.$index, scope.row)">删除</el-button>
-                </template>
-            </el-table-column>
-        </el-table>
-        <div class="pagination">
-            <el-pagination
-                    @current-change ="handleCurrentChange"
-                    layout="prev, pager, next"
-                    :total="1000">
-            </el-pagination>
+        <div class="list">
+            <div class="table">
+                <div class="information">申请信息列表</div>
+            <template class="table1">
+                <el-form :model="ruleForm" :rules="rules" ref="ruleForm"  class="demo-ruleForm" label-width="200px">
+                    <el-form :inline="true" :model="ruleForm":rules="rules" ref="ruleForm"  class="demo-ruleForm" >
+                    <el-form-item label="姓名" prop="name" style="margin-left: 100px">
+                        <el-input style="width: 100px"  v-model="ruleForm.name"></el-input>
+                    </el-form-item>
+                    <el-form-item label="班级" prop="class" >
+                        <el-input style="width: 100px"  v-model="ruleForm.class"></el-input>
+                    </el-form-item>
+                    </el-form>
+                    <el-form-item   label="期望就业方向" prop="region">
+                        <el-select v-model="ruleForm.region" placeholder="请选择就业方向">
+                            <el-option label="Andriod" value="Andriod"></el-option>
+                            <el-option label="Java" value="Java"></el-option>
+                            <el-option label="运维" value="运维"></el-option>
+                            <el-option label="前端" value="前端"></el-option>
+                            <el-option label="php" value="php"></el-option>
+                            <el-option label="python" value="python"></el-option>
+                            <el-option label="C++" value="C++"></el-option>
+                            <el-option label="C#" value="C#"></el-option>
+                            <el-option label="测试方向" value="测试方向"></el-option>
+                        </el-select>
+                    </el-form-item>
+                    <el-form-item label="期望就业地点" prop="place">
+                        <el-select v-model="ruleForm.region" placeholder="请选择就业地点">
+                            <el-option label="广州" value="guangzhou"></el-option>
+                            <el-option label="深圳" value="shenzhen"></el-option>
+                            <el-option label="佛山" value="foshan"></el-option>
+                            <el-option label="东莞" value="dongguang"></el-option>
+                            <el-option label="上海" value="shanghai"></el-option>
+                            <el-option label="北京" value="beijing"></el-option>
+                            <el-option label="测试地点" value="place1"></el-option>
+                        </el-select>
+                    </el-form-item>
+                    <el-form-item label="期望推荐时间" required>
+                        <el-col :span="11">
+                            <el-form-item prop="date1">
+                                <el-date-picker type="date" placeholder="选择日期" v-model="ruleForm.date1" style="width: 80%;"></el-date-picker>
+                            </el-form-item>
+                        </el-col>
+                    </el-form-item>
+                    <el-form-item label="是否需要拓胜推荐" prop="resource" style="margin-left: 30px">
+                        <el-radio-group v-model="ruleForm.resource">
+                            <el-radio label="是"></el-radio>
+                            <el-radio label="否"></el-radio>
+                        </el-radio-group>
+                    </el-form-item>
+                </el-form>
+
+            </template>
+
+</div> <div class="crumbs1">
+            <el-button  size="small">确认提交</el-button>
+        </div>
         </div>
     </div>
 </template>
@@ -46,6 +74,7 @@
     export default {
         data() {
             return {
+<<<<<<< HEAD
                 url: './static/vuetable.json',
                 tableData: [],
                 cur_page: 1,
@@ -117,26 +146,91 @@
                 self.del_list = self.del_list.concat(self.multipleSelection);
                 for (let i = 0; i < length; i++) {
                     str += self.multipleSelection[i].name + ' ';
+=======
+                ruleForm: {
+                    name: '',
+                    class:'',
+                    region: '',
+                    place:'',
+                    date1: '',
+                    resource: '',
+                },
+                rules: {
+                    name: [
+                        { required: true, message: '请输入姓名', trigger: 'blur' },
+                        { min: 3, max: 5, message: '长度在 3 到 5 个字符', trigger: 'blur' }
+                    ],
+                    class: [
+                        { required: true, message: '请输入班级', trigger: 'blur' },
+                        { min: 3, max: 5, message: '长度在 3 到 5 个字符', trigger: 'blur' }
+                    ],
+                    region: [
+                        { required: true, message: '请选择就业方向', trigger: 'change' }
+                    ],
+                    place: [
+                        { required: true, message: '请选择就业地点', trigger: 'change' }
+                    ],
+                    date1: [
+                        { type: 'date', required: true, message: '请选择日期', trigger: 'change' }
+                    ],
+                    resource: [
+                        { required: true, message: '请选择是否需要推荐', trigger: 'change' }
+                    ],
+>>>>>>> origin/dev
                 }
-                self.$message.error('删除了'+str);
-                self.multipleSelection = [];
-            },
-            handleSelectionChange(val) {
-                this.multipleSelection = val;
-            }
-        }
+            };
+        },
+
     }
 </script>
 
-<style scoped>
-.handle-box{
-    margin-bottom: 20px;
+<style >
+
+.crumbs{
+    background-color:#EEF7FD;
+    border: 1px solid  #B3CDE8;
 }
-.handle-select{
-    width: 120px;
+.crumbs-vue{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
 }
-.handle-input{
-    width: 300px;
-    display: inline-block;
+.plugins{
+    background-color:#ffffff;
+    border: 1px solid  #B3CDE8;
+    height: 30px;
+}
+  .div1{
+      font-size: 5px;margin-top: 5px;background-color: yellow;width: 160px;
+  }
+.list{
+    background-color:#ffffff;
+    border: 1px solid  #B3CDE8;
+    margin-top: 10px;
+    height: 500px;
+}
+.information{
+    margin-bottom: 30px;
+    text-align: center;
+    color: #1A438E;
+    background-color: #CFE0F1;
+    height: 40px;
+    line-height: 40px;
+    width:480px;
+}
+    .table{
+        margin-top: 40px;
+        margin-left: 280px;
+        width: 480px;
+        height: 380px;
+        border: 1px solid  #B3CDE8;
+    }
+.crumbs1{
+    margin-top: 37px;
+    background-color:#EEF7FD;
+    border-top: 1px solid  #B3CDE8;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
 }
 </style>

@@ -48,6 +48,10 @@ export default new Router({
                 {
                     path: '/drag',
                     component: resolve => require(['../components/page/DragList.vue'], resolve)    // 拖拽列表组件
+                },
+                {
+                    path: '/WJJL',
+                    component: resolve => require(['../components/page/WJJL.vue'], resolve)    // 拖拽列表组件
                 }
             ]
         },

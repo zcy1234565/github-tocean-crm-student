@@ -40,7 +40,7 @@
                         title: '提交报告',
                         subs: [
                             {
-                                index: 'basetable',
+                                index: 'vuetable',
                                 title: '提交日报'
                             },
                             {
@@ -96,7 +96,7 @@
                                 title: '考勤记录'
                             },
                             {
-                                index: 'vueeditor',
+                                index: 'WJJL',
                                 title: '违规记录'
                             },
                             {
@@ -112,7 +112,7 @@
                                 title: '项目考核情况'
                             },
                             {
-                                index: 'vueeditor',
+                                index: 'VueEditor',
                                 title: '班级管理积极性'
                             },
                             {

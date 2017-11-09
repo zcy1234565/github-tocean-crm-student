@@ -204,7 +204,7 @@
 
 
 </template>
-<div class="hello">你好</div>
+<div class="hello">你好！</div>
 <script>
     export default {
         data() {

@@ -14,7 +14,11 @@ export default new Router({
             component: resolve => require(['../components/zcy/loginHeader.vue'], resolve),
         },
         {
-                path:'/readme',
+                path:'/home',
+                meta:{
+                    //添加字段，表示进入这个角色需要登录的
+                    requiresArg:true,
+                 },
                  component: resolve => require(['../components/common/Home.vue'], resolve),
             children:[
                 {
@@ -28,6 +32,10 @@ export default new Router({
                 {
                     path: '/vuetable',
                     component: resolve => require(['../components/page/VueTable.vue'], resolve)     // vue-datasource组件
+                },
+                {
+                    path: '/Readme',
+                    component: resolve => require(['../components/page/Readme.vue'], resolve)     // vue-datasource组件
                 },
                 {
                     path: '/baseform',
@@ -52,6 +60,18 @@ export default new Router({
                 {
                     path: '/drag',
                     component: resolve => require(['../components/page/DragList.vue'], resolve)    // 拖拽列表组件
+                },
+                {
+                    path: '/tjxm',
+                    component: resolve => require(['../components/page/tjxm.vue'], resolve)    // 拖拽列表组件
+                },
+                {
+                    path: '/BasePriaseRcord',
+                    component: resolve => require(['../components/page/BasePriaseRcord.vue'], resolve)    // 拖拽列表组件
+                },
+                {
+                    path: '/kqjl',
+                    component: resolve => require(['../components/page/kqjl.vue'], resolve)    // 拖拽列表组件
                 },
                 {
                     path: '/WJJL',

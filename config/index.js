@@ -40,11 +40,7 @@ module.exports = {
                 changeOrigin: true
             },
             '/student':{
-<<<<<<< HEAD
-                target: 'http://192.168.4.159:8090',
-=======
                 target: 'http://192.168.4.59:8090',
->>>>>>> origin/dev
                 changeOrigin: true
             }
         },

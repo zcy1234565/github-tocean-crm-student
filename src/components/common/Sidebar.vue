@@ -33,7 +33,7 @@
                     },
                     {
                         icon: 'el-icon-TJXM',
-                        index: 'TJXM',
+                        index: 'tjxm',
                         title: '提交项目'
                     },
                     {
@@ -76,12 +76,12 @@
                     },
                     {
                         icon: 'el-icon-star-on',
-                        index: 'basecharts',
+                        index: 'upload',
                         title: '上传简历'
                     },
                     {
                         icon: 'el-icon-upload2',
-                        index: 'drag',
+                        index: 'basetable',
                         title: '就业申请'
                     },
                     {
@@ -94,7 +94,7 @@
                                 title: '学员档案'
                             },
                             {
-                                index: 'vueeditor',
+                                index: 'kqjl',
                                 title: '考勤记录'
                             },
                             {
@@ -102,7 +102,7 @@
                                 title: '违规记录'
                             },
                             {
-                                index: 'vueeditor',
+                                index: 'BasePriaseRcord',
                                 title: '表扬记录'
                             },
                             {

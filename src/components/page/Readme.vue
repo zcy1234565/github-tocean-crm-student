@@ -1,4 +1,7 @@
 <template>
+
+    <div class="table">
+
         <div class="crumbs">
             <el-breadcrumb separator="/">
                 <el-breadcrumb-item><i class="el-icon-menu"></i> 当前功能</el-breadcrumb-item>

@@ -151,11 +151,13 @@
         left: 5px;
         top: 75px;
         margin-right: 30px;
-
+        height: 700px;
+        overflow: auto;
 
     }
     .sidebar > ul {
         background-color: #ffffff;
+
     }
 
 </style>

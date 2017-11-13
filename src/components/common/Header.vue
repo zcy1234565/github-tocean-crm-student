@@ -2,24 +2,25 @@
         <div class="header">
             <div class="logo">拓胜学生端系统</div>
             <img class="header-1" src="../../../screenshots/title.png"/>
-            <!--
-                 <dev class="Welcome">欢迎来到拓胜学生端系统！</dev>
-                <el-button type="success" size="mini" class="but">请您登录</el-button>-->
             <div class="user-info">
                 <el-dropdown trigger="click" @command="handleCommand">
-                    <span class="el-dropdown-link" v-if="!!username">
+                    <span class="el-dropdown-link"  v-if="!!username">
                         <img class="user-logo" src="../../../static/img/img.jpg">
                         {{username}}
                     </span>
+
                     <span class="el-dropdown-link" v-else-if="!username">
-                        <dev class="Welcome">欢迎来到拓胜学生端系统！</dev>
+
+                        <div class="Welcome">欢迎来到拓胜学生端系统！</div>
                        <el-button type="success" size="mini" class="but"  @click="handleCommand('login')" >请您登录</el-button>
+
                     </span>
-                    <el-dropdown-menu slot="dropdown">
+
+                    <el-dropdown-menu slot="dropdown" v-if="!!username" >
                         <el-dropdown-item command="loginout">退出</el-dropdown-item>
                         <!--
-                        <a href="http://localhost:8080/#/LoginHeader" ></a>
-                        -->
+                        <a href="http://localhost:8080/#/LoginHeader" >  </a>
+                            -->
                     </el-dropdown-menu>
                 </el-dropdown>
             </div>
@@ -37,15 +38,16 @@
         },
         computed:{
             username(){
-                let username = localStorage.getItem('ms_username');
+                let username = localStorage.getItem('USERNAME');
                 return username ;
             }
         },
         methods:{
             handleCommand(command) {
                 if(command == 'loginout') {
-                    localStorage.removeItem('ms_username')
-                    this.$route.go(0);
+                    localStorage.removeItem('USERNAME')
+                    localStorage.removeItem('JWT_TOKEN')
+                    this.$router.go(0);
                 }else if(command=='login'){
                     this.$router.push('/login');
                 }

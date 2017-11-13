@@ -1,4 +1,4 @@
-<template>
+ <template>
     <div>
         <div class="crumbs_a">
             <el-breadcrumb class="crumbs_itool">

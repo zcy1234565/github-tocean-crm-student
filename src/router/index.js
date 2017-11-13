@@ -20,7 +20,7 @@ export default new Router({
                     requiresArg:true,
                  },
                  component: resolve => require(['../components/common/Home.vue'], resolve),
-            children:[
+                children:[
                 {
                     path: '/',
                     component: resolve => require(['../components/page/Readme.vue'], resolve)

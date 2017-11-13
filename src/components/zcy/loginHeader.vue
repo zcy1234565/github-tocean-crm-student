@@ -13,20 +13,18 @@
         </el-header>
 
 
-
-
-
         <el-main>
             <!-- #EndLibraryItem -->
+         <div class="ZBDHL" >
             <div class="main_div">
-                <div class="image_big"><img src="images/page_images/flicking_img1.png" width="660" height="360" alt="图片"  />
-                    <a><img src="images/page_images/left_button.png" width="19" height="41" alt="左方向" />
-                        留学生怎么申请奖学金？<img src="images/page_images/right_button.png" width="19" height="41" alt="右方向" /></a>
+                <div class="image_big"><img src="../../../screenshots/flicking_img1.png" width="660" height="360" alt="图片"  />
+                    <a><img src="../../../screenshots/left_button.png" width="19" height="41" alt="左方向" />
+                        留学生怎么申请奖学金？<img src="../../../screenshots/right_button.png" width="19" height="41" alt="右方向" /></a>
                 </div>
                 <div class="right_massage">
                     <div class="massage_top"><span>重大消息</span>
                     </div>
-                    <div class="massage_body"><div><img src="images/other_images/new_img.png" width="135" height="81" alt="城市图片" />
+                    <div class="massage_body"><div><img src="../../../screenshots/new_img.png" width="135" height="81" alt="城市图片" />
                         <p>北京政治学院英语专业</p><p class="small_word">目前北京留学行业服务协会（以下简称BOSSA）···[详细]</p></div>
                         <ul>
                             <li>央广：把足球绑上高考的指挥棒 能一挥就灵</li>
@@ -36,17 +34,18 @@
                         </ul>
                     </div>
                 </div>
+                <!--
                 <div class="image">
-                    <div class="image1"><img src="images/page_images/index_img1.png" width="243" height="105" alt="图1" /></div>
-                    <div class="image2"><img src="images/page_images/index_img2.png" width="243" height="105" alt="图2" /></div>
-                    <div class="image2"><img src="images/page_images/index_img3.png" width="243" height="105" alt="图3" /></div>
-                    <div class="image2"><img src="images/page_images/index_img4.png" width="243" height="105" alt="图4" /></div>
-                    <div class="image1"><img src="images/page_images/index_img5.png" width="243" height="105" alt="图5" /></div>
-                    <div class="image2"><img src="images/page_images/index_img6.png" width="243" height="105" alt="图6" /></div>
-                    <div class="image2"><img src="images/page_images/index_img7.png" width="243" height="105" alt="图7" /></div>
-                    <div class="image2"><img src="images/page_images/index_img8.png" width="243" height="105" alt="图8" /></div>
+                    <div class="image1"><img src="../../../screenshots/index_img1.png" width="243" height="105" alt="图1" /></div>
+                    <div class="image2"><img src="../../../screenshots/index_img2.png" width="243" height="105" alt="图2" /></div>
+                    <div class="image2"><img src="../../../screenshots/index_img3.png" width="243" height="105" alt="图3" /></div>
+                    <div class="image2"><img src="../../../screenshots/index_img4.png" width="243" height="105" alt="图4" /></div>
+                    <div class="image1"><img src="../../../screenshots/index_img5.png" width="243" height="105" alt="图5" /></div>
+                    <div class="image2"><img src="../../../screenshots/index_img6.png" width="243" height="105" alt="图6" /></div>
+                    <div class="image2"><img src="../../../screenshots/index_img7.png" width="243" height="105" alt="图7" /></div>
+                    <div class="image2"><img src="../../../screenshots/index_img8.png" width="243" height="105" alt="图8" /></div>
                 </div>
-
+-->
                 <div class="news_list">
                     <div class="news_top"><span>行页动态</span><a href="#">more</a></div>
                     <div class="news_body">
@@ -138,6 +137,7 @@
                     </div>
                 </div>
                 <div class="image3"><img src="images/page_images/index_ad.png" width="640" height="160" alt="广告图片" /></div>
+              <!--
                 <div class="image_bottom">
                     <div class="dot"></div>
                     <div class="word_title"><span>成员机构</span></div>
@@ -163,29 +163,12 @@
                     </div>
                     <div class="image4_right"><img src="images/page_images/right_button2.png" width="20" height="61" alt="右向" /></div>
                 </div>
+                -->
             </div>
+
             <!-- #BeginLibraryItem "/lib/bottom.lbi" -->
-            <!--网页末尾部-->
-            <div class="bottom_div">
-                <div class="bottom_body">
-                    <div class="bottom_title"> <span class="friend_link">友情链接</span> <img src="images/page_images/hide.png" width="10" height="6" alt="收起图片" /> <span class="link">收起</span> </div>
-                    <ul>
-                        <li><a href="#">广东省教育厅</a></li>
-                        <li><a href="#">广州市教育局</a></li>
-                        <li><a href="#">美国领事馆</a></li>
-                        <li><a href="#">广东省教育厅</a></li>
-                        <li><a href="#">广州市教育局</a></li>
-                        <li><a href="#">美国领事馆</a></li>
-                        <li><a href="#">英国领事馆</a></li>
-                        <li><a href="#">雅思培训</a></li>
-                        <li><a href="#">SAT培训</a></li>
-                        <li><a href="#">ACT培训</a></li>
-                        <li><a href="#">学术英语</a></li>
-                    </ul>
-                    <p class="address">电话：020-61101095 &nbsp;&nbsp;传真：020-6110109&nbsp;&nbsp;地址：广东省广州市天河区天河北路30号东812A室</p>
-                    <p class="right">&copy;版权所有&nbsp;&nbsp;广东省留学服务&nbsp;&nbsp;粤ICP备XXXXXXXX号</p>
-                </div>
-            </div>
+
+         </div>
             <!-- #EndLibraryItem -->
 
         </el-main>
@@ -195,7 +178,32 @@
 
 
         <el-footer>
-            <div class="WBDHL"></div>
+            <div class="WBDHL">
+                <!--网页末尾部-->
+                <div class="bottom_div">
+                    <div class="bottom_body">
+                        <div class="bottom_title"> <span class="friend_link">友情链接</span> <img src="../../../screenshots/hide.png" width="10" height="6" alt="收起图片" />
+                            <span class="link">收起</span> </div>
+                        <ul>
+                            <li><a href="#">广东省教育厅</a></li>
+                            <li><a href="#">广州市教育局</a></li>
+                            <li><a href="#">美国领事馆</a></li>
+                            <li><a href="#">广东省教育厅</a></li>
+                            <li><a href="#">广州市教育局</a></li>
+                            <li><a href="#">美国领事馆</a></li>
+                            <li><a href="#">英国领事馆</a></li>
+                            <li><a href="#">雅思培训</a></li>
+                            <li><a href="#">SAT培训</a></li>
+                            <li><a href="#">ACT培训</a></li>
+                            <li><a href="#">学术英语</a></li>
+                        </ul>
+                        <p class="address">电话：020-61101095 &nbsp;&nbsp;传真：020-6110109&nbsp;&nbsp;地址：广东省广州市天河区天河北路30号东812A室</p>
+                        <p class="right">&copy;版权所有&nbsp;&nbsp;广东省留学服务&nbsp;&nbsp;粤ICP备XXXXXXXX号</p>
+                    </div>
+                </div>
+
+
+            </div>
         </el-footer>
     </el-container>
 
@@ -231,7 +239,6 @@
     }
 </script>
 <style scoped>
-
     .header {
         background: url('../../../screenshots/timg2.jpg')no-repeat;
         background-size: 100%;
@@ -294,9 +301,8 @@
         text-align: center;
     }
     .WBDHL{
-        height: 50px;
-        width: 100%;
-        background-color: magenta;
+
+
     }
 
 
@@ -581,5 +587,9 @@
         height: 40px;
         float: left;
         text-align: center;
+    }
+    .ZBDHL{
+        height: 800px;
+        overflow: auto;
     }
 </style>

@@ -3,7 +3,7 @@
     <div>
         <div>
             <el-breadcrumb class="crumbs-vue">
-                <el-breadcrumb-item><i class="el-icon-menu"></i> 当前功能</el-breadcrumb-item>
+                <el-breadcrumb-item><i class="el-icon-menu"></i>当前功能</el-breadcrumb-item>
                 <el-breadcrumb-item>项目考核信息查询</el-breadcrumb-item>
             </el-breadcrumb>
         </div>

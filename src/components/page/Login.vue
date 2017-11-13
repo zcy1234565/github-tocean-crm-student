@@ -20,7 +20,7 @@
 
 <script>
     export default {
-        data: function(){
+        data: function () {
             return {
                 ruleForm: {
                     username: '',
@@ -28,13 +28,16 @@
                 },
                 rules: {
                     username: [
-                        { required: true, message: '请输入用户名', trigger: 'blur' }
+                        {required: true, message: '请输入用户名', trigger: 'blur'}
                     ],
                     password: [
-                        { required: true, message: '请输入密码', trigger: 'blur' }
+                        {required: true, message: '请输入密码', trigger: 'blur'}
                     ]
-                }
+                },
+                errorMsg: '',
+                url: '/student/login'
             }
+
         },
         methods: {
             submitForm(formName) {
@@ -48,12 +51,33 @@
                         return false;
                     }
                 });
-            }
-        }
+                    /*if (valid) {
+                        var param = {
+                            username:self.ruleForm.username,
+                            password:self.ruleForm.password
+                        };
+                        self.$axios.post(self.url, param).then((res) => {
+                            console.log(res.data.success);
+                            if(res.data.success){ //登录成功
+                                localStorage.setItem('USERNAME',self.ruleForm.username);
+                                localStorage.setItem('JWT_TOKEN',res.data.result);
+                                self.$router.push('/home');
+                            }else{
+                                self.errorMsg = res.data.error;
+                            }
+                        })
+                    } else {
+                        console.log('error submit!!');
+                        return false;
+                    }
+                })*/
+          }
+          }
     }
 </script>
 
-<style scoped>
+<style
+    scoped>
     .login-wrap{
         position: relative;
         width:100%;

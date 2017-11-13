@@ -40,7 +40,7 @@
                         title: '提交报告',
                         subs: [
                             {
-                                index: 'basetable',
+                                index: 'vuetable',
                                 title: '提交日报'
                             },
                             {
@@ -74,12 +74,12 @@
                     },
                     {
                         icon: 'el-icon-star-on',
-                        index: 'basecharts',
+                        index: 'upload',
                         title: '上传简历'
                     },
                     {
                         icon: 'el-icon-upload2',
-                        index: 'drag',
+                        index: 'basetable',
                         title: '就业申请'
                     },
                     {
@@ -92,7 +92,7 @@
                                 title: '学员档案'
                             },
                             {
-                                index: 'vueeditor',
+                                index: 'kqjl',
                                 title: '考勤记录'
                             },
                             {

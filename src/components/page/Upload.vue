@@ -1,8 +1,8 @@
 <template>
     <div>
-        <div class="crumbs">
+        <div>
             <el-breadcrumb class="crumbs-vue">
-                <el-breadcrumb-item> 当前功能</el-breadcrumb-item>
+                <el-breadcrumb-item><i class="el-icon-menu"></i> 当前功能</el-breadcrumb-item>
                 <el-breadcrumb-item>上传简历信息</el-breadcrumb-item>
             </el-breadcrumb>
         </div>

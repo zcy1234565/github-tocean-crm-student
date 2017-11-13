@@ -3,10 +3,6 @@
 
 
     <div class="header">
-
-
-
-
         <div class="logo">拓胜学生端系统</div>
         <div class="user-info">
             <el-dropdown trigger="click" @command="handleCommand">

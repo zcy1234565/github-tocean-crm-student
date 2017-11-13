@@ -1,8 +1,8 @@
 <template>
     <div>
-        <div class="crumbs">
+        <div>
             <el-breadcrumb class="crumbs-vue">
-                <el-breadcrumb-item> 当前功能</el-breadcrumb-item>
+                <el-breadcrumb-item> <i class="el-icon-menu"></i> 当前功能</el-breadcrumb-item>
                 <el-breadcrumb-item>就业申请信息</el-breadcrumb-item>
             </el-breadcrumb>
         </div>
@@ -74,6 +74,7 @@
     export default {
         data() {
             return {
+
                 ruleForm: {
                     name: '',
                     class:'',
@@ -103,6 +104,7 @@
                     resource: [
                         { required: true, message: '请选择是否需要推荐', trigger: 'change' }
                     ],
+
                 }
             };
         },

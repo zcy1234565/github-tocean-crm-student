@@ -1,8 +1,9 @@
+
 <template>
     <div>
-        <div class="crumbs">
+        <div>
             <el-breadcrumb class="crumbs-vue">
-                <el-breadcrumb-item> 当前功能</el-breadcrumb-item>
+                <el-breadcrumb-item> <i class="el-icon-menu"></i>当前功能</el-breadcrumb-item>
                 <el-breadcrumb-item>学员考勤信息查询</el-breadcrumb-item>
             </el-breadcrumb>
         </div>
@@ -283,8 +284,8 @@
 
     }
     .paginations{
-      margin-top: 5px;
-      margin-left: 770px;
+        margin-top: 5px;
+        margin-left: 770px;
     }
     .informationss{
         color: #1A438E;

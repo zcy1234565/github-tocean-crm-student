@@ -1,11 +1,12 @@
 <template>
     <div class="sidebar">
-        <el-menu :default-active="onRoutes" class="el-menu-vertical-demo" theme="dark" unique-opened router>
-            <template v-for="item in items">
+        <el-menu :default-active="onRoutes" class="el-menu-vertical-demo" theme="dark" unique-opened router ba >
+            <template
+                      v-for="item in items">
                 <template v-if="item.subs">
                     <el-submenu :index="item.index">
-                        <template slot="title"><i :class="item.icon"></i>{{ item.title }}</template>
-                        <el-menu-item v-for="(subItem,i) in item.subs" :key="i" :index="subItem.index">{{ subItem.title }}
+                        <template slot="title" ><i :class="item.icon"></i>{{ item.title }}</template>
+                        <el-menu-item  v-for="(subItem,i) in item.subs" :key="i" :index="subItem.index">{{ subItem.title }}
                         </el-menu-item>
                     </el-submenu>
                 </template>
@@ -23,6 +24,7 @@
     export default {
         data() {
             return {
+
                 items: [
                     {
                         icon: 'el-icon-setting',
@@ -31,7 +33,7 @@
                     },
                     {
                         icon: 'el-icon-TJXM',
-                        index: 'TJXM',
+                        index: 'tjxm',
                         title: '提交项目'
                     },
                     {
@@ -96,11 +98,11 @@
                                 title: '考勤记录'
                             },
                             {
-                                index: 'vueeditor',
+                                index: 'WJJL',
                                 title: '违规记录'
                             },
                             {
-                                index: 'vueeditor',
+                                index: 'BasePriaseRcord',
                                 title: '表扬记录'
                             },
                             {
@@ -108,11 +110,11 @@
                                 title: '作业完成情况'
                             },
                             {
-                                index: 'vueeditor',
+                                index: 'XMKHQK',
                                 title: '项目考核情况'
                             },
                             {
-                                index: 'vueeditor',
+                                index: 'VueEditor',
                                 title: '班级管理积极性'
                             },
                             {
@@ -139,18 +141,24 @@
         }
     }
 </script>
-
+<!--bottom:0;-->
 <style scoped>
     .sidebar{
+        color: #ffffff;
         display: block;
         position: absolute;
-        width: 250px;
-        left: 0;
-        top: 70px;
-        bottom:0;
-        background: #2E363F;
+        width: 220px;
+        left: 5px;
+        top: 75px;
+        margin-right: 30px;
+        height: 700px;
+        overflow: auto;
+
     }
     .sidebar > ul {
-        height:100%;
+        background-color: #ffffff;
+
     }
+
 </style>
+

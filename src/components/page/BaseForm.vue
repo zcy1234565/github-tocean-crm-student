@@ -1,82 +1,169 @@
 <template>
-    <div>
-        <div class="crumbs">
-            <el-breadcrumb separator="/">
-                <el-breadcrumb-item><i class="el-icon-date"></i> 表单</el-breadcrumb-item>
-                <el-breadcrumb-item>基本表单</el-breadcrumb-item>
-            </el-breadcrumb>
-        </div>
-        <div class="form-box">
-            <el-form ref="form" :model="form" label-width="80px">
-                <el-form-item label="表单名称">
-                    <el-input v-model="form.name"></el-input>
-                </el-form-item>
-                <el-form-item label="选择器">
-                    <el-select v-model="form.region" placeholder="请选择">
-                        <el-option key="bbk" label="步步高" value="bbk"></el-option>
-                        <el-option key="xtc" label="小天才" value="xtc"></el-option>
-                        <el-option key="imoo" label="imoo" value="imoo"></el-option>
-                    </el-select>
-                </el-form-item>
-                <el-form-item label="日期时间">
-                    <el-col :span="11">
-                        <el-date-picker type="date" placeholder="选择日期" v-model="form.date1" style="width: 100%;"></el-date-picker>
-                    </el-col>
-                    <el-col class="line" :span="2">-</el-col>
-                    <el-col :span="11">
-                        <el-time-picker type="fixed-time" placeholder="选择时间" v-model="form.date2" style="width: 100%;"></el-time-picker>
-                    </el-col>
-                </el-form-item>
-                <el-form-item label="选择开关">
-                    <el-switch on-text="" off-text="" v-model="form.delivery"></el-switch>
-                </el-form-item>
-                <el-form-item label="多选框">
-                    <el-checkbox-group v-model="form.type">
-                        <el-checkbox label="步步高" name="type"></el-checkbox>
-                        <el-checkbox label="小天才" name="type"></el-checkbox>
-                        <el-checkbox label="imoo" name="type"></el-checkbox>
-                    </el-checkbox-group>
-                </el-form-item>
-                <el-form-item label="单选框">
-                    <el-radio-group v-model="form.resource">
-                        <el-radio label="步步高"></el-radio>
-                        <el-radio label="小天才"></el-radio>
-                        <el-radio label="imoo"></el-radio>
-                    </el-radio-group>
-                </el-form-item>
-                <el-form-item label="文本框">
-                    <el-input type="textarea" v-model="form.desc"></el-input>
-                </el-form-item>
-                <el-form-item>
-                    <el-button type="primary" @click="onSubmit">提交</el-button>
-                    <el-button>取消</el-button>
-                </el-form-item>
-            </el-form>
-        </div>
 
-    </div>
+    <el-container>
+        <el-container>
+            <div class="title">Header</div>
+            <div class="title-2">你好</div>
+            <div class="title-3">Header</div>
+            <el-main>
+                <el-table
+                    :data="tableData"
+                    border
+                    style="width: 100%; height:500px">
+                    <el-table-column
+                        prop="XH"
+                        label="序号"
+                        width="72"
+                        height="500">
+                    </el-table-column>
+                    <el-table-column
+                        prop="name"
+                        label="学员名称"
+                        width="100"
+                        height="10">
+                    </el-table-column>
+                    <el-table-column
+                        prop="ont"
+                        label="学号"
+                        width="180"
+                        height="10">
+                    </el-table-column>
+
+                    <el-table-column
+                        prop="class1"
+                        label="班级"
+                        width="180"
+                        height="10">
+                    </el-table-column>
+                    <el-table-column
+                        prop="sex"
+                        label="性别"
+                        width="80"
+                        height="10">
+                    </el-table-column>
+                    <el-table-column
+                        prop="XL"
+                        label="学历"
+                        width="80"
+                        height="10">
+                    </el-table-column>
+                    <el-table-column
+                        prop="RXphone"
+                        label="入学时联系电话"
+                        width="200"
+                        height="10">
+                    </el-table-column>
+                    <el-table-column
+                        prop="LXphone"
+                        label="离学时联系电话"
+                        width="200"
+                        height="10">
+                    </el-table-column>
+                </el-table>
+
+            </el-main>
+            <!--
+            <el-footer>Footer</el-footer>
+            -->
+        </el-container>
+    </el-container>
 </template>
 
 <script>
     export default {
-        data: function(){
+        data() {
             return {
-                form: {
-                    name: '',
-                    region: '',
-                    date1: '',
-                    date2: '',
-                    delivery: true,
-                    type: ['步步高'],
-                    resource: '小天才',
-                    desc: ''
-                }
-            }
-        },
-        methods: {
-            onSubmit() {
-                this.$message.success('提交成功！');
+                tableData: [{
+                    XH:'1',
+                    date: '2016-05-03',
+                    name: '王小虎',
+                    address: '上海市普陀区金沙江路 1518 弄'
+                }, {
+                    XH:'2',
+                    date: '2016-05-02',
+                    name: '王小虎',
+                    address: '上海市普陀区金沙江路 1518 弄'
+                }, {
+                    XH:'3',
+                    date: '2016-05-04',
+                    name: '王小虎',
+                    address: '上海市普陀区金沙江路 1518 弄'
+                }, {
+                    XH:'4',
+                    date: '2016-05-01',
+                    name: '王小虎',
+                    address: '上海市普陀区金沙江路 1518 弄'
+                }, {
+                    XH:'5',
+                    date: '2016-05-08',
+                    name: '王小虎',
+                    address: '上海市普陀区金沙江路 1518 弄'
+                }, {
+                    XH:'6',
+                    date: '2016-05-06',
+                    name: '王小虎',
+                    address: '上海市普陀区金沙江路 1518 弄'
+                }, {
+                    XH:'7',
+                    date: '2016-05-07',
+                    name: '王小虎',
+                    address: '上海市普陀区金沙江路 1518 弄'
+                }]
             }
         }
     }
 </script>
+
+<style scoped>
+    .title{
+        background-color: #d2ecff;
+        margin-bottom: 10px;
+        color: #333;
+        text-align: left;
+        height: 30px;
+        width: 100%;
+    }
+    .title-2{
+        background-color: #d2ecff;
+        margin-bottom: 10px;
+        color: #333;
+        text-align: left;
+        line-height: 50px;
+        width: 100%;
+    }
+    .title-3{
+        background-color: #d2ecff;
+        color: #333;
+        text-align: left;
+       line-height: 30px;
+        width: 100%;
+    }
+
+    .el-aside {
+        background-color: #D3DCE6;
+        color: #333;
+        text-align: center;
+        line-height: 200px;
+    }
+
+    .el-main {
+        background-color:#d2ecff;
+        color: #333;
+        text-align: center;
+        line-height: 100px;
+    }
+
+    body > .el-container {
+        margin-bottom: 40px;
+    }
+
+    .el-container:nth-child(5) .el-aside,
+    .el-container:nth-child(6) .el-aside {
+        line-height: 260px;
+    }
+
+    .el-container:nth-child(7) .el-aside {
+        line-height: 320px;
+    }
+</style>
+
